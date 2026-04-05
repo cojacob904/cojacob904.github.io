@@ -1,0 +1,122 @@
+/* 
+.im-fell-english-regular {
+  font-family: "IM Fell English", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.im-fell-english-regular-italic {
+  font-family: "IM Fell English", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+*/
+
+* { 
+    --dust-grey: #dad7cdff;
+    --gunmetal: #454545ff;
+    --taupe-grey: #6d5959;
+    --sea-green: #5e8c61ff;
+    --sea-green-2: #32936fff;
+    color: var(--gunmetal); 
+    font-family: "IM Fell English", serif;
+}
+
+body{
+    background-image: url(./assets/css-pattern-by-magicpattern.png);
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+    font-size: 35px;
+    padding: 5px;
+    text-shadow: 3px 2px 0px var(--dust-grey);
+}
+
+header::first-letter{
+    font-size: 50px;
+}
+
+.title {
+    font-size: 25px;
+    margin-bottom: 32px;
+    line-height: 65px;
+    background-color: var(--dust-grey);
+    padding: 20px;
+    border-radius: 8px;
+    border: .5px solid var(--taupe-grey);
+    margin-right: auto;
+    margin-left: auto;
+    width: 85%;
+}
+
+.title::first-letter{
+    font-size: 45px;
+}
+
+h2 {
+    font-size: 50px;
+    text-shadow: 3px 2px 0px var(--dust-grey);
+}
+
+h2::first-letter {
+    font-size: 70px;
+}
+
+.cards div {
+    background-color: var(--dust-grey);
+    padding: 20px;
+    border: .5px solid var(--taupe-grey);
+    border-radius: 8px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+    transition: all .5s;
+}
+
+.cards div:hover {
+    box-shadow: 8px 8px var(--taupe-grey);
+}
+
+.cards div > img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 3px 3px 1px var(--taupe-grey);
+}
+
+.education > ul {
+    background-color: var(--dust-grey);
+    padding: 25px;
+    border-radius: 8px;
+    border: .5px solid var(--taupe-grey);
+    font-size: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.year {
+    color: var(--taupe-grey);
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+footer > h3 {
+    font-size: 30px;
+    padding: 10px;
+    background-color: var(--dust-grey);
+    border: .5px solid var(--taupe-grey);
+    border-radius: 8px;
+}
