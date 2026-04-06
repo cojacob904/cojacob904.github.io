@@ -1,0 +1,70 @@
+* {
+    --card-green: #7AC74C;
+    background-color: antiquewhite;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: bold;
+}
+
+.card {
+    width: 500px;
+    height: 750px;
+    background-color: var(--card-green);
+    padding: 36px;
+    border-radius: 12px;
+    border: 12px solid silver;
+    box-shadow: 5px 5px 5px darkslategrey;
+}
+
+.card > img {
+    width: 97%;
+    height: 300px;
+    object-fit: cover;
+    border: 8px solid silver;
+    margin-bottom: 12px;
+    
+}
+
+#decidueye {
+    font-size: 35px;
+    background-color: silver;
+    border-radius: 20px;
+    padding: 10px;
+    word-spacing: 240px;
+    padding-bottom: 4px;
+    margin-bottom: 0px;
+}
+
+#hp {
+    font-size: 15px;
+    background-color: silver;
+}
+
+#ability {
+    font-size: 25px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    background-color: var(--card-green);
+}
+
+#ability-description {
+    font-size: 15px;
+    background-color: var(--card-green);
+    width: 94%;
+}
+
+#move {
+    font-size: 25px;
+    word-spacing: 320px;
+    background-color: var(--card-green);
+}
+
+#spacer {
+    height: 300px;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    margin-top: 130px;
+    background-color: silver;
+}
