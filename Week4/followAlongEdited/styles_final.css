@@ -1,0 +1,284 @@
+/*
+    font-family: "IBM Plex Mono", monospace;
+  font-family: "News Cycle",
+  sans-serif;
+
+*/ 
+
+/*REM VS EM*/
+
+* { 
+    --primaryWhite: white; 
+    --primaryBlack: black; 
+    --emphasisRed: #C20000;
+    font-size: 12px; 
+    font-family: "IBM Plex Mono", monospace;
+
+}
+
+body{ 
+  padding: 0px; 
+  margin: 0px; 
+  background-color: black;
+
+
+}
+
+/* questions for PARENT flex MODULE
+
+1. What is the parent item? 
+1.5: WHAT AXIS are we flexing across? 
+2. What is the ARRANGEMENT or JUSTIFY of the internal items (distribution across the X axis) 
+3. How are these items supposed to sit IN the parent (align items, across the y axis)
+*/ 
+nav {
+  position: fixed; 
+  top: 0px; 
+  left: 0px; 
+  background-color: var(--primaryBlack);
+  color: var(--primaryWhite);
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  padding: 24px; 
+  margin: 0 auto;
+  font-family: "IBM Plex Mono", monospace;
+  width: 100vw; 
+  z-index: 10; 
+  height: 96px;
+
+  /* flex item child*/ 
+
+}
+
+nav > img { 
+  height: 60px; 
+  width: 60px; 
+}
+
+nav > ul {
+
+  margin-left: 24px; 
+ /* as a flex item*/ 
+
+ flex-grow: auto;
+ /* as a flex container */ 
+  list-style-type: none;
+  display: flex; 
+  justify-content: space-around;
+}
+
+nav ul > li { 
+  padding: 12px; 
+  margin-right: 12px; 
+}
+
+nav ul > li:hover{
+  background-color: var(--emphasisRed);
+  color: var(--primaryBlack);
+}
+
+.hero{
+
+
+  /*fix for calc function not working*/
+  background-image: url('./assets/thehiss.webp'); 
+  height: 100vh; 
+  width: 100vw; 
+  background-size: cover;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 36px; 
+  position: relative;
+  box-sizing: border-box; 
+  
+}
+
+/*flexing in column means that we are distributing equally across the y  (cross) axis.*/ 
+
+/* comma is a brand new selector it means AND*/ 
+.hero  header, .hero p{
+  margin: 0 auto; 
+  z-index: 9;
+}
+
+.hero header{
+  font-size: 60px; 
+  color: white; 
+  
+}
+
+.hero p{
+  font-size: 48px; 
+  color: white; 
+}
+
+#overlay {
+  position: absolute; 
+  top: 0px; 
+  left: 0px; 
+  z-index: 8;
+  height: 100vh; 
+  width: 100vw; 
+  background-color: rgba(7, 7, 7, 0.5);
+}
+.message{
+  display: flex; 
+  width: 95vw; 
+  justify-content: center;
+  align-items: center;
+}
+
+h2{
+  font-size: 36px;
+  color: white; 
+}
+
+.contentLeft{
+  color: var(--primaryWhite);
+  padding: 12px; 
+    font-family: "News Cycle";
+    font-size: 1.5rem;
+}
+
+.contentRight > p {
+  font-family: "News Cycle";
+    font-size: 1.5rem;
+}
+
+.director{
+  width: 95vw; 
+  display: grid; 
+  grid-template-columns: 50% 50%;
+
+}
+
+#directorImage > img { 
+  width: 100%; 
+
+}
+
+.contentRight{
+  padding: 12px; 
+  color: white;
+}
+
+.dashboard{
+  padding: 24px; 
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 150px 150px;
+  gap: 4px 4px; 
+
+}
+
+.dashboard > div {
+  background-color: white;
+  color: black;
+  border-radius: 4px; 
+  padding: 12px; 
+}
+
+.dashboard > div > h2 {
+  margin-bottom: 4px; 
+  color: var(--emphasisRed);
+}
+
+
+
+footer{
+  display: grid; 
+  color: white;
+  grid-template-columns: 150px repeat(4, 1fr);
+  column-gap: 6px;
+
+}
+
+footer > img {
+  width: 100%;
+}
+
+footer > div {
+  padding: 12px;
+}
+
+#stats{
+  padding-left: 24px;
+}
+
+@media screen and (max-width: 720px) {
+
+  *{
+    font-size: 14px; 
+  }
+  
+    nav {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      background-color: var(--primaryBlack);
+      color: var(--primaryWhite);
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 12px;
+      margin: 0 auto;
+      font-family: "IBM Plex Mono", monospace;
+      width: 100vw;
+      z-index: 10;
+      height: 72px;
+    }
+
+        nav>ul {
+    
+          margin-left: 12px;
+          /* as a flex item*/
+    
+          flex-grow: auto;
+          /* as a flex container */
+          list-style-type: none;
+          display: flex;
+          justify-content: space-around;
+        }
+
+    .hero{
+        box-sizing: border-box;
+    }
+
+    .director, .message {
+      display: block; 
+      width: 100vw; 
+      padding: .5rem; 
+    }
+
+        .dashboard {
+          padding: 24px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(3, 1fr);
+          gap: 4px 4px;
+    
+        }
+
+    .message > img {
+      width: 100%; 
+    }
+
+        footer {
+          display: flex;
+          background-color: white;
+          color: black;
+          flex-direction: column;
+    
+        }
+
+        footer h2 { 
+          color: black;
+        }
+
+        footer >  div > img {
+          display: none; 
+        }
+}
