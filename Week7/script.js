@@ -44,7 +44,7 @@ async function fetchWeatherData(lat, lon) {
     }
 }
 
-// Function to generate the HTML cards
+// function to generate the HTML cards
 function displayWeatherCards(dailyData) {
     const container = document.getElementById('weatherContainer');
     container.innerHTML = ""; // Clear previous results
